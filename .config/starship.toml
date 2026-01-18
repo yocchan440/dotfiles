@@ -1,0 +1,34 @@
+add_newline = false
+format = "$directory $custom"
+
+# === 明示的に無効化（重要） ===
+[character]
+disabled = true
+
+[hostname]
+disabled = true
+
+[username]
+disabled = true
+
+[cmd_duration]
+disabled = true
+
+[git_branch]
+disabled = true
+
+[git_status]
+disabled = true
+
+# === custom modules ===
+[directory]
+style = "blue"
+truncate_to_repo = false
+truncation_length = 0
+format = "[$path]($style)"
+
+[custom.prompt_char]
+command = "if test (id -u) -eq 0; echo '#'; else; echo '$'; end"
+when = true
+style = "bold green"
+format = "[$output]($style)"
